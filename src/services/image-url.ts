@@ -1,4 +1,4 @@
-import noImage from '../assets/rawg-logo.png' //add a placeholder image
+import noImage from '../assets/placeholder-600x400.png'
 const getCroppedImageURL = (url: string) => {
     if (!url) return noImage;
     const target = 'media/'
