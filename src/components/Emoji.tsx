@@ -1,7 +1,7 @@
 import { GiBullseye } from "react-icons/gi";
 import { FaRegThumbsUp } from "react-icons/fa6";
 import { FaRegMeh } from "react-icons/fa";
-import { Icon, IconProps, Image, ImageProps } from "@chakra-ui/react";
+import { Icon, IconProps } from "@chakra-ui/react";
 interface Props {
   rating: number;
 }
