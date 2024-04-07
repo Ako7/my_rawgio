@@ -15,6 +15,6 @@ const usePlatforms = () => useQuery<FetchResponse<Platform>, Error>({
     //queryFn: apiclient.getAll
     queryFn: apiClient.getAll,
     staleTime: 24 * 60 * 60 * 1000,
-    initialData: { count: platforms.length, results: platforms },
+    initialData: { count: platforms.length, results: platforms, next: null },
 })
 export default usePlatforms;
