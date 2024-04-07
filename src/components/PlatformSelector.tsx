@@ -3,10 +3,10 @@ import { useState } from "react";
 import * as bs from "react-icons/bs";
 import usePlatforms, { Platform } from "../hooks/usePlatforms";
 interface Props {
-  onSelectPlatform: (platform: Platform) => void;
+  onSelectPlatformId: (platform: Platform) => void;
 }
 
-const PlatformSelector = ({ onSelectPlatform }: Props) => {
+const PlatformSelector = ({ onSelectPlatformId }: Props) => {
   const { data, error } = usePlatforms();
   const [platformName, setPlatformName] = useState("Platform");
   if (error) return null;
@@ -20,7 +20,7 @@ const PlatformSelector = ({ onSelectPlatform }: Props) => {
           <MenuItem
             onClick={() => {
               setPlatformName(platform.name);
-              onSelectPlatform(platform);
+              onSelectPlatformId(platform);
             }}
             key={platform.id}
           >
