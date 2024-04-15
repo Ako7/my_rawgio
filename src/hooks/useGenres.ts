@@ -4,7 +4,7 @@ import ApiClient from "../services/apiClient";
 import { FetchResponse } from "../services/apiClient";
 import genres from "../data/genres";
 import ms from "ms";
-import { Genre } from "../entities/Genre";
+import Genre from "../entities/Genre";
 
 const apiClient = new ApiClient<Genre>("/genres")
 const useGenres = () => {
