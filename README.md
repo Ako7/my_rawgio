@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+# Wprowadzenie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dzieki temu projektowi nauczyłem się tworzenia aplikacji w React. W składowych projektu zawiera się szata graficzna aplikacji stworzona w ChakraUI. Do nawigowania po aplikacji użyłem react-router-dom. Pobieranie odpowiednich danych było zrealizowane za pomocą custom hooków które były oparte o uniwersane API do pobierania danych. Dzięki react-infinite-scroll-component udało mi się zaimplementować nieskończone scrollowanie kart z grami. Aby przypieszyć działanie aplikacji niezmienne dane umieściłem w plikach aplikacji co podniosło szybkość sortowania pozycji i wczytywania strony. Do zarządzania stanem globalnym aplikacji użyłem biblioteki zustand. Podczas tworzenia aplikacji przestrzegałem zasad czystego kodu, usunąłem powstałe redundancje wyodrębniając opisane w typescript jednostki(entities).
 
-Currently, two official plugins are available:
+# Narzędzia
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Główne: React, Typescript
+- Projekt graficzny: ChakraUI
+- Formularze: react-hook-form, zod
+- Wczytywanie danych: ReactQuery, Axios
+- Zarządzanie stanem globalnym: Zustand
 
-## Expanding the ESLint configuration
+# Podsumowanie
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Nowe umiejętności:
 
-- Configure the top-level `parserOptions` property like this:
+- Tworzenie i obsługa aplikacji w react opartej o dane pobierane z serwera.
+- Projektowanie responsywnych i szybkich interfejsów użytkownika.
+- Lepsza praca z formularzami pod kątem interfejsu oraz walidacji danych.
+- Praca z zustand w celu wyeliminowania nadmiarowego przekazywania zmiennych między komponentami.
+- Praca z reactQuery w celu zoptymalizowanego pobierania i używania pobranych danych.
+- Tworzenie nawigacji w aplikacji za pomocą reactRouterDom.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Aplikacja została wykonana w ramach kursu React Testing z https://codewithmosh.com
